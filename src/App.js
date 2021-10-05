@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Contact from './components/Contact';
 import Home from './components/Home';
+import Navbar from './components/Navbar';
 import Projects from './components/Projects';
 
 function App() {
@@ -10,11 +11,9 @@ function App() {
       <div className="App">
         <header className="App-header">
           <h3>Hi, my name is Sam! </h3>
+          <Navbar />
         </header>
         <body>
-          <p>About</p>
-          <p>Projects</p>
-          <p>Contact</p>
           <Switch>
             <Route path="/" exact>
               <Home />
