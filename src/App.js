@@ -1,5 +1,8 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, NavLink } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Contact from './components/Contact';
+import Home from './components/Home';
+import Projects from './components/Projects';
 
 function App() {
   return (
@@ -12,6 +15,17 @@ function App() {
           <p>About</p>
           <p>Projects</p>
           <p>Contact</p>
+          <Switch>
+            <Route path="/" exact>
+              <Home />
+            </Route>
+            <Route path="/contact">
+              <Contact />
+            </Route>
+            <Route path="/projects">
+              <Projects />
+            </Route>
+          </Switch>
         </body>
       </div>
     </Router>
