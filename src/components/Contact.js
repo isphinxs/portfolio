@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Contact() {
-    const handleSubmit = () => {
+    const handleClick = () => {
         debugger;
     }
 
@@ -38,7 +38,7 @@ function Contact() {
                     <i className="far fa-check-circle success-icon"></i>
                     <div className="error"></div>
                 </div>
-                <button id="btn" onSubmit={handleSubmit}>Submit</button>
+                <button id="btn" onClick={handleClick}>Submit</button>
             </form>
         </div>
     )
