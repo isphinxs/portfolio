@@ -14,22 +14,20 @@ function App() {
           <h3>Hi, my name is Sam! </h3>
           <Navbar />
         </header>
-        <body>
-          <Switch>
-            <Route path="/" exact>
-              <Home />
-            </Route>
-            <Route path="/blog">
-              <Blog />
-            </Route>
-            <Route path="/contact">
-              <Contact />
-            </Route>
-            <Route path="/projects">
-              <Projects />
-            </Route>
-          </Switch>
-        </body>
+        <Switch>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+          <Route path="/blog">
+            <Blog />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+          <Route path="/projects">
+            <Projects />
+          </Route>
+        </Switch>
       </div>
     </Router>
   );
