@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser, faEnvelope, faEnvelopeOpenText, faExclamationCircle, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 
 function Contact() {
     const handleClick = () => {
@@ -16,26 +18,26 @@ function Contact() {
                 <div className="title">Contact Sam</div>
                 <div>
                     <label htmlFor="name">Name</label>
-                    <i className="fas fa-user"></i>
+                    <FontAwesomeIcon icon={faUser} />
                     <input type="text" name="name" id="name" placeholder="Gremelda Snitchelfink" />
-                    <i className="fas fa-exclamation-circle failure-icon"></i>
-                    <i className="far fa-check-circle success-icon"></i>
+                    <FontAwesomeIcon icon={faExclamationCircle} />
+                    <FontAwesomeIcon icon={faCheckCircle} />
                     <div className="error"></div>
                 </div>
                 <div>
                     <label htmlFor="email">Email</label>
-                    <i className="fas fa-envelope"></i>
+                    <FontAwesomeIcon icon={faEnvelope} />
                     <input type="text" name="email" id="email" placeholder="phoenix@gmail.com" />
-                    <i className="fas fa-exclamation-circle failure-icon"></i>
-                    <i className="far fa-check-circle success-icon"></i>
+                    <FontAwesomeIcon icon={faExclamationCircle} />
+                    <FontAwesomeIcon icon={faCheckCircle} />
                     <div className="error"></div>
                 </div>
                 <div>
                     <label htmlFor="content">Content</label>
-                    <i className="fa-solid fa-envelope-open-text"></i>
+                    <FontAwesomeIcon icon={faEnvelopeOpenText} />
                     <textarea name="content" id="content" placeholder="Hi! I'd love to connect." />
-                    <i className="fas fa-exclamation-circle failure-icon"></i>
-                    <i className="far fa-check-circle success-icon"></i>
+                    <FontAwesomeIcon icon={faExclamationCircle} />
+                    <FontAwesomeIcon icon={faCheckCircle} />
                     <div className="error"></div>
                 </div>
                 <button id="btn" onClick={handleClick}>Submit</button>
