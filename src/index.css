@@ -11,3 +11,85 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 400px;
+  padding: 50px;
+}
+
+.title {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+form div input, form div textarea {
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  outline: none;
+  border: 2px solid #C4C4C4;
+  padding: 0 30px;
+}
+
+form div {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+input:focus {
+  border: 2px solid #7400B8;
+}
+
+form div .icon {
+  position: absolute;
+}
+
+.failure-icon, .error {
+  color: red;
+}
+
+.success-icon {
+  color: green;
+}
+
+.error {
+  font-size: 14.5px;
+  margin-top: 5px;
+}
+
+.success-icon, .failure-icon {
+  right: 0;
+  opacity: 0;
+}
+
+button {
+  margin-top: 15px;
+  width: 100%;
+  height: 45px;
+  background-color: #5E60CE;
+  border: 2px solid #5E60CE;
+  border-radius: 4px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+button:hover {
+  opacity: 0.8;
+}

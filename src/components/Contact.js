@@ -18,26 +18,26 @@ function Contact() {
                 <div className="title">Contact Sam</div>
                 <div>
                     <label htmlFor="name">Name</label>
-                    <FontAwesomeIcon icon={faUser} />
+                    <FontAwesomeIcon className="icon" icon={faUser} size="med" />
                     <input type="text" name="name" id="name" placeholder="Gremelda Snitchelfink" />
-                    <FontAwesomeIcon icon={faExclamationCircle} />
-                    <FontAwesomeIcon icon={faCheckCircle} />
+                    <FontAwesomeIcon className="icon failure-icon" icon={faExclamationCircle} size="med" />
+                    <FontAwesomeIcon className="icon success-icon" icon={faCheckCircle} size="med" />
                     <div className="error"></div>
                 </div>
                 <div>
                     <label htmlFor="email">Email</label>
-                    <FontAwesomeIcon icon={faEnvelope} />
+                    <FontAwesomeIcon className="icon" icon={faEnvelope} size="med" />
                     <input type="text" name="email" id="email" placeholder="phoenix@gmail.com" />
-                    <FontAwesomeIcon icon={faExclamationCircle} />
-                    <FontAwesomeIcon icon={faCheckCircle} />
+                    <FontAwesomeIcon className="icon failure-icon" icon={faExclamationCircle} size="med" />
+                    <FontAwesomeIcon className="icon success-icon" icon={faCheckCircle} size="med" />
                     <div className="error"></div>
                 </div>
                 <div>
                     <label htmlFor="content">Content</label>
-                    <FontAwesomeIcon icon={faEnvelopeOpenText} />
+                    <FontAwesomeIcon className="icon" icon={faEnvelopeOpenText} size="med" />
                     <textarea name="content" id="content" placeholder="Hi! I'd love to connect." />
-                    <FontAwesomeIcon icon={faExclamationCircle} />
-                    <FontAwesomeIcon icon={faCheckCircle} />
+                    <FontAwesomeIcon className="icon failure-icon" icon={faExclamationCircle} size="med" />
+                    <FontAwesomeIcon className="icon success-icon" icon={faCheckCircle} size="med" />
                     <div className="error"></div>
                 </div>
                 <button id="btn" onClick={handleClick}>Submit</button>
