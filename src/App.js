@@ -11,7 +11,6 @@ function App() {
     <Router>
       <div className="App">
         <header className="App-header">
-          <h3>Hi, my name is Sam! </h3>
           <Navbar />
         </header>
         <Switch>
