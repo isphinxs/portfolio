@@ -6,6 +6,9 @@ function Contact() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [content, setContent] = useState("");
+    const error = document.getElementsByClassName("error");
+    const successIcon = document.getElementsByClassName("success-icon");
+    const failureIcon = document.getElementsByClassName("failure-icon");
 
     const handleChange = event => {
         if (event.target.name === "name") {
@@ -16,11 +19,28 @@ function Contact() {
         };
         if (event.target.name === "content") {
             setContent(event.target.value);
-        }
+        };
     }
 
-    const handleClick = () => {
-        debugger;
+    const handleClick = event => {
+        event.preventDefault();
+        validate(name, 0, "Name cannot be blank");
+        validate(email, 1, "Email cannot be blank");
+        validate(content, 2, "Content cannot be blank");
+        // debugger;
+    }
+
+    const validate = (value, serial, message) => {
+        if (value.trim() === "") {
+            error[serial].innerHTML = message;
+            successIcon[serial].style.opacity = 0;
+            failureIcon[serial].style.opacity = 1;
+        } else {
+            error[serial].innerhtml = "";
+            
+            successIcon[serial].style.opacity = 1;
+            failureIcon[serial].style.opacity = 0;
+        }
     }
 
     return(
