@@ -57,6 +57,7 @@ input:focus {
 
 form div .icon {
   position: absolute;
+  margin: 10px;
 }
 
 .failure-icon, .error {
