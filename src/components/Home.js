@@ -1,8 +1,11 @@
 import React from 'react';
+import Pdf from '../documents/Resume.pdf';
 
 function Home() {
     return(
-        <h3>Home Page</h3>
+        <div>
+            <a href={Pdf} target="_blank">Download Sam's Resume</a>
+        </div>
     )
 }
 
