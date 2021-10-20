@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from 'emailjs-com';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faEnvelope, faEnvelopeOpenText, faExclamationCircle, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 
@@ -9,6 +10,8 @@ function Contact() {
     const error = document.getElementsByClassName("error");
     const successIcon = document.getElementsByClassName("success-icon");
     const failureIcon = document.getElementsByClassName("failure-icon");
+
+    const form = useRef();
 
     const handleChange = event => {
         if (event.target.name === "name") {
