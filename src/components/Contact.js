@@ -99,6 +99,7 @@ function Contact() {
                     <FontAwesomeIcon className="icon success-icon" icon={faCheckCircle} size="1x" />
                     <div className="error"></div>
                 </div>
+                <div className="g-recaptcha" data-sitekey="process.env.REACT_APP_SITE_ID"></div>
                 <input type="submit" value="Submit" />
             </form>
         </div>
