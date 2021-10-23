@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faEnvelope, faEnvelopeOpenText, faExclamationCircle, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
@@ -10,8 +10,6 @@ function Contact() {
     const error = document.getElementsByClassName("error");
     const successIcon = document.getElementsByClassName("success-icon");
     const failureIcon = document.getElementsByClassName("failure-icon");
-
-    const form = useRef();
 
     const handleChange = event => {
         if (event.target.name === "name") {
@@ -30,9 +28,26 @@ function Contact() {
         validate(name, 0, "Name cannot be blank");
         validate(email, 1, "Email cannot be blank");
         validate(content, 2, "Content cannot be blank");
-        emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_USER_ID)
+
+        const templateParams = {
+            from_name: name,
+            reply_to: email,
+            message: content
+        }
+
+        const resetForm = () => {
+            setName("");
+            setEmail("");
+            setContent("");
+            successIcon[0].style.opacity = 1;
+            successIcon[1].style.opacity = 1;
+            successIcon[2].style.opacity = 1;
+        }
+
+        emailjs.send(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, templateParams, process.env.REACT_APP_USER_ID)
             .then(result => {
                 console.log(result.text);
+                resetForm();
             }, error => {
                 console.log(error.text);
             });
@@ -58,7 +73,7 @@ function Contact() {
                 <li><a href="https://www.linkedin.com/in/sam-ostrowski/">LinkedIn</a></li>
                 <li><a href="https://github.com/isphinxs">GitHub</a></li>
             </ul>
-            <form ref={form} onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <div className="title">Contact Sam</div>
                 <div>
                     <label htmlFor="name">Name</label>
@@ -84,7 +99,7 @@ function Contact() {
                     <FontAwesomeIcon className="icon success-icon" icon={faCheckCircle} size="1x" />
                     <div className="error"></div>
                 </div>
-                <input type="button" value="Submit" />
+                <input type="submit" value="Submit" />
             </form>
         </div>
     )
