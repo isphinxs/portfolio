@@ -68,13 +68,12 @@ function Contact() {
 
     return(
         <div className="Contact">
-            <h3>Contact</h3>
+            <div className="title">Contact Sam</div>
             <ul>
                 <li><a href="https://www.linkedin.com/in/sam-ostrowski/">LinkedIn</a></li>
                 <li><a href="https://github.com/isphinxs">GitHub</a></li>
             </ul>
             <form onSubmit={handleSubmit}>
-                <div className="title">Contact Sam</div>
                 <div>
                     <label htmlFor="name">Name</label>
                     <FontAwesomeIcon className="icon" icon={faUser} size="1x" />
