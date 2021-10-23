@@ -25,12 +25,17 @@ function Contact() {
         };
     }
 
-    const handleClick = event => {
+    const handleSubmit = event => {
         event.preventDefault();
         validate(name, 0, "Name cannot be blank");
         validate(email, 1, "Email cannot be blank");
         validate(content, 2, "Content cannot be blank");
-        // debugger;
+        emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_USER_ID)
+            .then(result => {
+                console.log(result.text);
+            }, error => {
+                console.log(error.text);
+            });
     }
 
     const validate = (value, serial, message) => {
@@ -53,7 +58,7 @@ function Contact() {
                 <li><a href="https://www.linkedin.com/in/sam-ostrowski/">LinkedIn</a></li>
                 <li><a href="https://github.com/isphinxs">GitHub</a></li>
             </ul>
-            <form>
+            <form ref={form} onSubmit={handleSubmit}>
                 <div className="title">Contact Sam</div>
                 <div>
                     <label htmlFor="name">Name</label>
@@ -79,7 +84,7 @@ function Contact() {
                     <FontAwesomeIcon className="icon success-icon" icon={faCheckCircle} size="1x" />
                     <div className="error"></div>
                 </div>
-                <button id="btn" onClick={handleClick}>Submit</button>
+                <input type="button" value="Submit" />
             </form>
         </div>
     )
