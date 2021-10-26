@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faEnvelope, faEnvelopeOpenText, faExclamationCircle, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 function Contact() {
     const [name, setName] = useState("");
@@ -69,10 +70,10 @@ function Contact() {
     return(
         <div className="Contact">
             <div className="title">Contact Sam</div>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/sam-ostrowski/">LinkedIn</a></li>
-                <li><a href="https://github.com/isphinxs">GitHub</a></li>
-            </ul>
+            <div>
+                <a className="contact-button" href="https://www.linkedin.com/in/sam-ostrowski/"><FontAwesomeIcon icon={faLinkedin} /> LinkedIn</a>
+                <a className="contact-button" href="https://github.com/isphinxs"><FontAwesomeIcon icon={faGithub} /> GitHub</a>
+            </div>
             <form onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="name">Name</label>
