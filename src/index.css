@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #00A5CF;
 }
 
 code {
@@ -17,6 +18,16 @@ code {
   padding: 0;
   box-sizing: border-box;
   font-family: 'Cormorant Garamond', serif;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+}
+
+a:hover {
+  background-color: #25A18E;
 }
 
 /* Navbar */
@@ -33,6 +44,13 @@ code {
 .navbar li {
   display: inline-block;
   margin: 2em;
+}
+
+/* About */
+
+.illustration {
+  max-width: 300px;
+  margin: 5px;
 }
 
 /* Contact Page */
@@ -116,7 +134,6 @@ button, .contact-button {
   font-size: 20px;
   cursor: pointer;
   transition: all 0.1s ease;
-  text-decoration: none;
 }
 
 button:hover {

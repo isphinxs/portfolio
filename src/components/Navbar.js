@@ -5,10 +5,10 @@ function Navbar() {
     return(
         <ul className="navbar">
             <li><h3><em>Hi, my name is Sam!</em></h3></li>
-            <li><NavLink to="/">About</NavLink></li>
-            <li><NavLink to="/Projects">Projects</NavLink></li>
-            <li><NavLink to="/Blog">Blog</NavLink></li>
-            <li><NavLink to="/Contact">Contact</NavLink></li>
+            <li><NavLink to="/">ABOUT</NavLink></li>
+            <li><NavLink to="/Projects">PROJECTS</NavLink></li>
+            <li><NavLink to="/Blog">BLOG</NavLink></li>
+            <li><NavLink to="/Contact">CONTACT</NavLink></li>
         </ul>
     )
 }
