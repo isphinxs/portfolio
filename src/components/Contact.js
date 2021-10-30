@@ -3,6 +3,7 @@ import emailjs from 'emailjs-com';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faEnvelope, faEnvelopeOpenText, faExclamationCircle, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import contact from '../undraw_contact.svg';
 
 function Contact() {
     const [name, setName] = useState("");
@@ -61,20 +62,22 @@ function Contact() {
             failureIcon[serial].style.opacity = 1;
         } else {
             error[serial].innerhtml = "";
-            
             successIcon[serial].style.opacity = 1;
             failureIcon[serial].style.opacity = 0;
         }
     }
 
     return(
-        <div className="Contact">
-            <div className="title">Contact Sam</div>
-            <div>
-                <a className="contact-button" href="https://www.linkedin.com/in/sam-ostrowski/"><FontAwesomeIcon icon={faLinkedin} /> LinkedIn</a>
-                <a className="contact-button" href="https://github.com/isphinxs"><FontAwesomeIcon icon={faGithub} /> GitHub</a>
+        <div className="container">
+            <div className="content">
+                <div className="text">Contact Sam</div>
+                <img alt="" className="illustration" src={contact} />
             </div>
-            <form onSubmit={handleSubmit}>
+            <form className="form" onSubmit={handleSubmit}>
+                <div className="buttons">
+                    <a className="contact-button" href="https://github.com/isphinxs"><FontAwesomeIcon icon={faGithub} /> GitHub</a>
+                    <a className="contact-button" href="https://www.linkedin.com/in/sam-ostrowski/"><FontAwesomeIcon icon={faLinkedin} /> LinkedIn</a>
+                </div>
                 <div>
                     <label htmlFor="name">Name</label>
                     <FontAwesomeIcon className="icon" icon={faUser} size="1x" />
@@ -100,7 +103,7 @@ function Contact() {
                     <div className="error"></div>
                 </div>
                 <div className="g-recaptcha" data-sitekey="process.env.REACT_APP_SITE_ID"></div>
-                <input type="submit" value="Submit" />
+                <input className="contact-button" type="submit" value="Submit" />
             </form>
         </div>
     )
