@@ -1,9 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink as Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { FaBars } from 'react-icons/fa';
+import Dropdown from './Dropdown';
 
 function Navbar() {
+    const [click, setClick] = useState(false);
+    const [dropdown, setDropdown] = useState(false);
+
+    const handleClick = () => {
+        setClick(!click);
+        setDropdown(!dropdown);
+    }
+
+    const closeMenu = () => {
+        setClick(false);
+        setDropdown(false);
+    }
+
+    // const onMouseEnter = () => {
+    //     setDropdown(true);
+    // }
+
+    // const onMouseLeave = () => {
+    //     setDropdown(false);
+    // }
+
     const Nav = styled.nav`
         background: #25A18E;
         color: #FFF;
@@ -54,7 +76,8 @@ function Navbar() {
         <>
             <Nav>
                 <NavLink to="/" exact><em>Hi, my name is Sam!</em></NavLink>
-                <Bars />
+                <Bars onClick={handleClick} />
+                {dropdown && <Dropdown closeMenu={closeMenu} />}
                 <NavMenu>
                     <NavLink to="/about">ABOUT</NavLink>
                     <NavLink to="/projects">PROJECTS</NavLink>
