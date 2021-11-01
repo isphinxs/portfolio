@@ -34,6 +34,13 @@ a {
   height: 65%;
 }
 
+/* Hero */
+
+.fa-terminal {
+  margin-top: 24px;
+}
+
+
 /* Contact Page */
 
 @media (max-width: 900px) {

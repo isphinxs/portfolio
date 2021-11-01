@@ -5,6 +5,7 @@ import Contact from './components/Contact';
 import Home from './components/Home';
 import Navbar from './components/Navbar/Navbar';
 import Projects from './components/Projects';
+import HeroSection from './components/HeroSection/index';
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
         </header>
         <Switch>
           <Route path="/" exact>
-            <Home />
+            {/* <Home /> */}
+            <HeroSection />
           </Route>
           <Route path="/blog">
             <Blog />
