@@ -18,14 +18,6 @@ function Navbar() {
         setDropdown(false);
     }
 
-    // const onMouseEnter = () => {
-    //     setDropdown(true);
-    // }
-
-    // const onMouseLeave = () => {
-    //     setDropdown(false);
-    // }
-
     const Nav = styled.nav`
         background: #25A18E;
         color: #FFF;
