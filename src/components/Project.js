@@ -2,7 +2,7 @@ import React from 'react';
 
 const Project = (props) => {
     return(
-        <ul>
+        <ul className="project">
             <li><h4>{props.project.title}</h4></li>
             { props.project.frontend ? <li><a href={props.project.frontend}>Front-end</a></li> : null }
             { props.project.backend ? <li><a href={props.project.backend}>Back-end</a></li> : null }

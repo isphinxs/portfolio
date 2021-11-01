@@ -26,23 +26,6 @@ a {
   /* color: white; */
 }
 
-
-/* Navbar */
-
-.navbar a {
-  text-decoration: none;
-  color: white;
-}
-
-.navbar {
-  background-color: #64DFDF;
-}
-
-.navbar li {
-  display: inline-block;
-  margin: 2em;
-}
-
 /* About */
 
 .illustration {
@@ -192,4 +175,10 @@ button, .contact-button {
 
 button:hover, .contact-button:hover {
   opacity: 0.8;
+}
+
+/* Projects */
+
+.project {
+  margin: 5px;
 }
