@@ -9,6 +9,7 @@ import Projects from './components/Projects/index';
 import HeroSection from './components/HeroSection/index';
 import { homeObjOne, homeObjTwo, homeObjThree } from './components/Projects/Data';
 import Services from './components/Services/index';
+import Footer from './components/Footer/index';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
             <Projects {...homeObjThree} />
           </Route>
         </Switch>
+        <Footer />
       </div>
     </Router>
   );
