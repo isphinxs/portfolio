@@ -1,12 +1,20 @@
 import styled from 'styled-components';
 
+export const BlogLink = styled.a`
+    color: #000;
+
+    &:visited {
+        color: #000;
+    }
+`;
+
 export const BlogContainer = styled.div`
     height: 800px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #010606;
+    background: #101522;
 
     @media screen and (max-width: 768px) {
         height: 1100px;
