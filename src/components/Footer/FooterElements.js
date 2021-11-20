@@ -83,7 +83,7 @@ export const SocialMediaWrap = styled.div`
     }
 `;
 
-export const SocialLogo = styled(Link)`
+export const NameLogo = styled(Link)`
     color: #FFF;
     font-family: 'Birthstone Bounce', cursive;
     justify-self: start;
