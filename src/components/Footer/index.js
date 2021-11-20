@@ -45,10 +45,10 @@ const Footer = () => {
                         <SocialLogo to="/">Sam</SocialLogo>
                         <WebsiteRights>&copy; {new Date().getFullYear()} Samantha Ostrowski</WebsiteRights>
                         <SocialIcons>
-                            <SocialIconLink href="//www.linkedin.com" target="_blank" aria-label="LinkedIn">
+                            <SocialIconLink href="https://www.linkedin.com/in/sam-ostrowski/" aria-label="LinkedIn">
                                 <FaLinkedin />
                             </SocialIconLink>
-                            <SocialIconLink href="//www.github.com" target="_blank" aria-label="GitHub">
+                            <SocialIconLink href="https://github.com/isphinxs" aria-label="GitHub">
                                 <FaGithub />
                             </SocialIconLink>
                         </SocialIcons>
