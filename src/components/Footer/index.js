@@ -43,7 +43,7 @@ const Footer = () => {
                 <SocialMedia>
                     <SocialMediaWrap>
                         <SocialLogo to="/">Sam</SocialLogo>
-                        <WebsiteRights>copyright {new Date().getFullYear()}</WebsiteRights>
+                        <WebsiteRights>&copy; {new Date().getFullYear()} Samantha Ostrowski</WebsiteRights>
                         <SocialIcons>
                             <SocialIconLink href="//www.linkedin.com" target="_blank" aria-label="LinkedIn">
                                 <FaLinkedin />
