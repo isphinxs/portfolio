@@ -85,6 +85,7 @@ export const SocialMediaWrap = styled.div`
 
 export const SocialLogo = styled(Link)`
     color: #FFF;
+    font-family: 'Birthstone Bounce', cursive;
     justify-self: start;
     cursor: pointer;
     text-decoration: none;
