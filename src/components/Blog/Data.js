@@ -3,7 +3,7 @@ export const Blogs = [
         title: "",
         tagline: "Check out my most recent blog posts on Medium.",
         img: require('../../images/undraw_resume.svg').default,
-        url: "https://medium.com/@isphinxs/organizing-css-with-react-styled-components-https://medium.com/@isphinxs"
+        url: "https://medium.com/@isphinxs"
     },
     {
         title: "Custom Domain Names",
