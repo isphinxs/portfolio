@@ -1,45 +1,11 @@
 import React from 'react';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
-import { FooterContainer, FooterWrap, FooterLinksContainer, FooterLinksWrapper, FooterLinkItems, FooterLinkTitle, FooterLink, SocialMedia, SocialMediaWrap, NameLogo, WebsiteRights, SocialIcons, SocialIconLink } from './FooterElements';
+import { FooterContainer, FooterWrap, SocialMedia, SocialMediaWrap, NameLogo, WebsiteRights, SocialIcons, SocialIconLink } from './FooterElements';
 
 const Footer = () => {
     return(
         <FooterContainer>
             <FooterWrap>
-                <FooterLinksContainer>
-                    <FooterLinksWrapper>
-                        <FooterLinkItems>
-                            <FooterLinkTitle>About</FooterLinkTitle>
-                            <FooterLink to="/about">About</FooterLink>
-                            <FooterLink to="/about">About</FooterLink>
-                            <FooterLink to="/about">About</FooterLink>
-                            <FooterLink to="/about">About</FooterLink>
-                        </FooterLinkItems>
-                        <FooterLinkItems>
-                            <FooterLinkTitle>About</FooterLinkTitle>
-                            <FooterLink to="/about">About</FooterLink>
-                            <FooterLink to="/about">About</FooterLink>
-                            <FooterLink to="/about">About</FooterLink>
-                            <FooterLink to="/about">About</FooterLink>
-                        </FooterLinkItems>
-                    </FooterLinksWrapper>
-                    <FooterLinksWrapper>
-                        <FooterLinkItems>
-                            <FooterLinkTitle>About</FooterLinkTitle>
-                            <FooterLink to="/about">About</FooterLink>
-                            <FooterLink to="/about">About</FooterLink>
-                            <FooterLink to="/about">About</FooterLink>
-                            <FooterLink to="/about">About</FooterLink>
-                        </FooterLinkItems>
-                        <FooterLinkItems>
-                            <FooterLinkTitle>About</FooterLinkTitle>
-                            <FooterLink to="/about">About</FooterLink>
-                            <FooterLink to="/about">About</FooterLink>
-                            <FooterLink to="/about">About</FooterLink>
-                            <FooterLink to="/about">About</FooterLink>
-                        </FooterLinkItems>
-                    </FooterLinksWrapper>
-                </FooterLinksContainer>
                 <SocialMedia>
                     <SocialMediaWrap>
                         <NameLogo to="/">Sam</NameLogo>
