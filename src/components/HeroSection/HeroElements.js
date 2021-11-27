@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 export const HeroContainer = styled.div`
@@ -10,7 +9,8 @@ export const HeroContainer = styled.div`
     height: 800px;
     position: relative;
     z-index: 1;
-`
+`;
+
 export const HeroContent = styled.div`
     color: white;
     max-width: 1200px;
@@ -20,7 +20,7 @@ export const HeroContent = styled.div`
     flex-direction: column;
     align-items: center;
     z-index: 3;
-`
+`;
 
 export const HeroH1 = styled.h1`
     color: white;
@@ -34,9 +34,9 @@ export const HeroH1 = styled.h1`
     @media screen and (max-width: 480px) {
         font-size: 32px;
     }
-    `
+`;
     
-    export const HeroP = styled.p`
+export const HeroP = styled.p`
     margin-top: 24px;
     color: white;
     font-size: 24px;
@@ -50,5 +50,8 @@ export const HeroH1 = styled.h1`
     @media screen and (max-width: 480px) {
         font-size: 18px;
     }    
-`
+`;
 
+export const HeroA = styled.a`
+    color: #FFF;
+`;
