@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from '../ButtonElements';
 import { ProjectContainer, ProjectWrapper, ProjectRow, Column1, Column2, TextWrapper, TopLine, Heading, Subtitle, BtnWrap, ImgWrap, Img } from './ProjectElements';
 
-const Projects = ({lightBg, id, imgStart, topLine, lightText, headline, darkText, description, buttonLabel, img, alt, primary, dark, dark2}) => {
+const Projects = ({lightBg, id, imgStart, topLine, lightText, headline, darkText, description, buttonLabel, img, alt, primary, dark, dark2, btnUrl}) => {
     return(
         <>
             <ProjectContainer lightBg={lightBg} id={id}>
@@ -14,7 +14,7 @@ const Projects = ({lightBg, id, imgStart, topLine, lightText, headline, darkText
                                 <Heading lightText={lightText}>{headline}</Heading>
                                 <Subtitle darkText={darkText}>{description}</Subtitle>
                                 <BtnWrap>
-                                    <Button to="home" 
+                                    <Button href={btnUrl}
                                         smooth={true}
                                         duration={500}
                                         spy={true}
