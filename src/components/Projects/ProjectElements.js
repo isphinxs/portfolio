@@ -51,7 +51,7 @@ export const TextWrapper = styled.div`
 `;
 
 export const TopLine = styled.p`
-    color: #01BF71;
+    color: #00A5CF;
     font-size: 16px;
     line-height: 16px;
     font-weight: 700;
@@ -86,12 +86,10 @@ export const BtnWrap = styled.div`
 `;
 
 export const ImgWrap = styled.div`
-    max-width: 555px;
+    max-width: 500px;
     height: 100%;
 `;
 
 export const Img = styled.img`
-    width: 100%;
-    margin: 0 0 10px 0;
-    padding-right: 0;
+    max-width: 300px;
 `;
