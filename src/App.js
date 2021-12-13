@@ -1,14 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Blog from './components/Blog';
-import Contact from './components/Contact';
-// import Home from './components/Home';
+import Contact from './components/Contact/index';
 import Navbar from './components/Navbar/Navbar';
-// import Projects from './components/Projects';
 import Projects from './components/Projects/index';
 import HeroSection from './components/HeroSection/index';
-import { homeObjOne, homeObjTwo, homeObjThree } from './components/Projects/Data';
-import Services from './components/Services/index';
+import { projectObjOne, projectObjTwo, projectObjThree } from './components/Projects/Data';
+import Blog from './components/Blog/index';
 import Footer from './components/Footer/index';
 
 function App() {
@@ -17,23 +14,21 @@ function App() {
       <div className="App">
         <header className="App-header">
           <Navbar />
-        </header>
+        </header>           
         <Switch>
           <Route path="/" exact>
-            {/* <Home /> */}
             <HeroSection />
           </Route>
           <Route path="/blog">
             <Blog />
-            <Services />
           </Route>
           <Route path="/contact">
             <Contact />
           </Route>
           <Route path="/projects">
-            <Projects {...homeObjOne} />
-            <Projects {...homeObjTwo} />
-            <Projects {...homeObjThree} />
+            <Projects {...projectObjOne} />
+            <Projects {...projectObjTwo} />
+            <Projects {...projectObjThree} />
           </Route>
         </Switch>
         <Footer />
