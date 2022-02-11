@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link } from 'react-scroll';
 
 export const Button = styled.a`
     border-radius: 50px;
