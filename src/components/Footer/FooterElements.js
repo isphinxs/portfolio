@@ -59,6 +59,6 @@ export const SocialIcons = styled.div`
 `;
 
 export const SocialIconLink = styled.a`
-    color: #FFF;
+    color: ${({lightText}) => (lightText ? "#FFF" : "#010606")};
     font-size: 24px;
 `;

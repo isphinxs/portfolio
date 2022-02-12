@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import About from './components/About/index';
 import Contact from './components/Contact/index';
 import Navbar from './components/Navbar/Navbar';
 import Projects from './components/Projects/index';
@@ -18,6 +19,9 @@ function App() {
         <Switch>
           <Route path="/" exact>
             <HeroSection />
+          </Route>
+          <Route path="/about">
+            <About />
           </Route>
           <Route path="/blog">
             <Blog />

@@ -11,10 +11,16 @@ const Footer = () => {
                         <NameLogo to="/">Sam</NameLogo>
                         <WebsiteRights>&copy; {new Date().getFullYear()} Samantha Ostrowski</WebsiteRights>
                         <SocialIcons>
-                            <SocialIconLink href="https://www.linkedin.com/in/sam-ostrowski/" aria-label="LinkedIn">
+                            <SocialIconLink 
+                                href="https://www.linkedin.com/in/sam-ostrowski/" 
+                                aria-label="LinkedIn"
+                                lightText={true}>
                                 <FaLinkedin />
                             </SocialIconLink>
-                            <SocialIconLink href="https://github.com/isphinxs" aria-label="GitHub">
+                            <SocialIconLink 
+                                href="https://github.com/isphinxs" 
+                                aria-label="GitHub"
+                                lightText={true}>
                                 <FaGithub />
                             </SocialIconLink>
                         </SocialIcons>

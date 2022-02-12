@@ -26,13 +26,6 @@ a {
   /* color: white; */
 }
 
-/* About */
-
-.illustration {
-  background-size: contain;
-  background-position: center;
-  height: 65%;
-}
 
 /* Hero */
 
@@ -73,11 +66,7 @@ a {
   }
 }
 
-.container {
-  display: flex;
-  flex-direction: row;
-}
-
+/* 
 .content {
   display: flex;
   flex-direction: column;
@@ -86,7 +75,7 @@ a {
   width: 55%;
   min-height: 100vh;
   padding: 10px 20px;
-}
+} */
 
 .buttons {
   display: flex;
@@ -116,19 +105,19 @@ a {
 
 /* Form */
 
-form {
+/* form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   max-width: 400px;
   padding: 50px;
-}
-
+} */
+/* 
 .title {
   font-size: 25px;
   font-weight: bold;
   margin-bottom: 20px;
-}
+} */
 
 label {
   display: block;
@@ -188,10 +177,4 @@ button, .contact-button {
 
 button:hover, .contact-button:hover {
   opacity: 0.8;
-}
-
-/* Projects */
-
-.project {
-  margin: 5px;
 }
