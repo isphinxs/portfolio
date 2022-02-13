@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faEnvelope, faEnvelopeOpenText, faExclamationCircle, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { ContactWrapper, Heading } from './ContactElements';
+import { SocialIconLink, SocialIcons } from '../Footer/FooterElements';
 
 function Contact() {
     const [name, setName] = useState("");
@@ -71,10 +72,6 @@ function Contact() {
         <ContactWrapper>
             <Heading>Contact Sam</Heading>
             <form className="form" onSubmit={handleSubmit}>
-                <div className="buttons">
-                    <a className="contact-button" href="https://github.com/isphinxs"><FontAwesomeIcon icon={faGithub} /> GitHub</a>
-                    <a className="contact-button" href="https://www.linkedin.com/in/sam-ostrowski/"><FontAwesomeIcon icon={faLinkedin} /> LinkedIn</a>
-                </div>
                 <div>
                     <label htmlFor="name">Name</label>
                     <FontAwesomeIcon className="icon" icon={faUser} size="1x" />
@@ -102,6 +99,22 @@ function Contact() {
                 <div className="g-recaptcha" data-sitekey="process.env.REACT_APP_SITE_ID"></div>
                 <input className="contact-button" type="submit" value="Submit" />
             </form>
+            <span>&nbsp;</span>
+            <span>&nbsp;</span>
+            <SocialIcons>
+                <SocialIconLink 
+                    href="https://www.linkedin.com/in/sam-ostrowski/" 
+                    aria-label="LinkedIn" 
+                    lightText={true}>
+                    <FaLinkedin />
+                </SocialIconLink>
+                <SocialIconLink 
+                    href="https://github.com/isphinxs" 
+                    aria-label="GitHub"
+                    lightText={true}>
+                    <FaGithub />
+                </SocialIconLink>
+            </SocialIcons>
         </ContactWrapper>
     )
 }
