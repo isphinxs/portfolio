@@ -3,7 +3,7 @@ import emailjs from 'emailjs-com';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faEnvelope, faEnvelopeOpenText, faExclamationCircle, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
-import { ContactWrapper, Heading } from './ContactElements';
+import { ContactWrapper, ContactH1, ContactForm, ContactLabel, ContactInput, ContactTextarea, ContactDiv, ErrorDiv, ContactSubmit } from './ContactElements';
 import { SocialIconLink, SocialIcons } from '../Footer/FooterElements';
 
 function Contact() {
@@ -70,35 +70,35 @@ function Contact() {
 
     return(
         <ContactWrapper>
-            <Heading>Contact Sam</Heading>
-            <form className="form" onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="name">Name</label>
+            <ContactH1>Contact Sam</ContactH1>
+            <ContactForm className="form" onSubmit={handleSubmit}>
+                <ContactDiv>
+                    <ContactLabel htmlFor="name">Name</ContactLabel>
                     <FontAwesomeIcon className="icon" icon={faUser} size="1x" />
-                    <input type="text" name="name" id="name" onChange={handleChange} placeholder="Gremelda Snitchelfink" value={name} />
+                    <ContactInput type="text" name="name" id="name" onChange={handleChange} placeholder="Name" value={name} />
                     <FontAwesomeIcon className="icon failure-icon" icon={faExclamationCircle} size="1x" />
                     <FontAwesomeIcon className="icon success-icon" icon={faCheckCircle} size="1x" />
-                    <div className="error"></div>
-                </div>
-                <div>
-                    <label htmlFor="email">Email</label>
+                    <ErrorDiv className="error"></ErrorDiv>
+                </ContactDiv>
+                <ContactDiv>
+                    <ContactLabel htmlFor="email">Email</ContactLabel>
                     <FontAwesomeIcon className="icon" icon={faEnvelope} size="1x" />
-                    <input type="text" name="email" id="email" onChange={handleChange} placeholder="phoenix@gmail.com" value={email} />
+                    <ContactInput type="text" name="email" id="email" onChange={handleChange} placeholder="Email" value={email} />
                     <FontAwesomeIcon className="icon failure-icon" icon={faExclamationCircle} size="1x" />
                     <FontAwesomeIcon className="icon success-icon" icon={faCheckCircle} size="1x" />
-                    <div className="error"></div>
-                </div>
-                <div>
-                    <label htmlFor="content">Content</label>
+                    <ErrorDiv className="error"></ErrorDiv>
+                </ContactDiv>
+                <ContactDiv>
+                    <ContactLabel htmlFor="content">Content</ContactLabel>
                     <FontAwesomeIcon className="icon" icon={faEnvelopeOpenText} size="1x" />
-                    <textarea name="content" id="content" onChange={handleChange} placeholder="Hi! I'd love to connect." value={content} />
+                    <ContactTextarea name="content" id="content" onChange={handleChange} placeholder="Hi! I'd love to connect." value={content} />
                     <FontAwesomeIcon className="icon failure-icon" icon={faExclamationCircle} size="1x" />
                     <FontAwesomeIcon className="icon success-icon" icon={faCheckCircle} size="1x" />
-                    <div className="error"></div>
-                </div>
+                    <ErrorDiv className="error"></ErrorDiv>
+                </ContactDiv>
+                <ContactSubmit className="contact-button" type="submit" value="Submit" />
                 <div className="g-recaptcha" data-sitekey="process.env.REACT_APP_SITE_ID"></div>
-                <input className="contact-button" type="submit" value="Submit" />
-            </form>
+            </ContactForm>
             <span>&nbsp;</span>
             <span>&nbsp;</span>
             <SocialIcons>
