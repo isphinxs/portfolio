@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Dropdown from './Dropdown';
+import Dropdown from '../Dropdown/Dropdown';
 import { Nav, NavLink, Bars, NavMenu } from './NavbarElements';
 import { animateScroll as scroll } from 'react-scroll';
 import { NameLogo } from '../Footer/FooterElements';

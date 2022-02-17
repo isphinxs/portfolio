@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import About from './components/About/index';
 import Contact from './components/Contact/index';
-import Navbar from './components/Navbar/Navbar';
+import Navbar from './components/Navbar';
 import Projects from './components/Projects/index';
 import HeroSection from './components/HeroSection/index';
 import { projectObjOne, projectObjTwo, projectObjThree } from './components/Projects/Data';
