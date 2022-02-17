@@ -6,7 +6,7 @@ export const ContactWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #000;
+    background: #010606;
 
     @media screen and (max-width: 768px) {
         height: 1100px;
