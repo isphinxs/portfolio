@@ -8,7 +8,6 @@ export const AboutContainer = styled.div`
     padding: 0 30px;
     height: 800px;
     position: relative;
-    z-index: 1;
 `;
 
 export const AboutContent = styled.div`
@@ -19,7 +18,6 @@ export const AboutContent = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 3;
 `;
 
 export const AboutH1 = styled.h1`
