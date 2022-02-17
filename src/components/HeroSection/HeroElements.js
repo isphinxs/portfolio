@@ -8,7 +8,6 @@ export const HeroContainer = styled.div`
     padding: 0 30px;
     height: 800px;
     position: relative;
-    z-index: 1;
 `;
 
 export const HeroContent = styled.div`
@@ -19,7 +18,6 @@ export const HeroContent = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 3;
 `;
 
 export const HeroH1 = styled.h1`
