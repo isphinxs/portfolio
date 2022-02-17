@@ -1,10 +1,11 @@
 .dropdown-menu {
     width: 200px;
     position: relative;
-    float:right;
+    float: right;
     top: 80px;
     list-style: none;
     text-align: start;
+    z-index: 1; 
 }
 
 .dropdown-menu li {
@@ -14,10 +15,6 @@
 
 .dropdown-menu li:hover {
     background: grey; 
-}
-
-.dropdown-menu.clicked {
-    display: none;
 }
 
 .dropdown-link {
