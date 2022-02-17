@@ -28,7 +28,7 @@ export const NavLink = styled(Link)`
     }
 `
 
-    export const Bars = styled(FaBars)`
+export const Bars = styled(FaBars)`
     display: none;
     color: #FFF;
 
