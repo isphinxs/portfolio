@@ -1,0 +1,17 @@
+form div .icon {
+    position: absolute;
+    margin: 10px;
+}
+  
+.failure-icon, .error {
+    color: red;
+}
+
+.success-icon {
+    color: green;
+}
+
+.success-icon, .failure-icon {
+    right: 23%;
+    opacity: 0;
+}

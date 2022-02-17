@@ -40,38 +40,3 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
-
-
-/* Hero */
-
-.fa-terminal {
-  margin-top: 24px;
-  opacity: 50%;
-}
-
-.fa-terminal:hover {
-  opacity: 100%;
-  cursor: pointer;
-}
-
-
-/* Contact Page */
-
-form div .icon {
-  position: absolute;
-  margin: 10px;
-}
-
-.failure-icon, .error {
-  color: red;
-}
-
-.success-icon {
-  color: green;
-}
-
-.success-icon, .failure-icon {
-  right: 23%;
-  opacity: 0;
-}
-
