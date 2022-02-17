@@ -2,6 +2,7 @@ import React from 'react';
 import { HeroContainer, HeroContent, HeroH1, HeroP, HeroA } from './HeroElements';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTerminal } from '@fortawesome/free-solid-svg-icons';
+import './Hero.css';
 
 const HeroSection = () => {
     return(
