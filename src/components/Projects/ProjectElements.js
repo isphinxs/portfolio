@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const ProjectContainer = styled.div`
-    color: #FFF;
-    background: ${({lightBg}) => (lightBg ? '#F9F9F9' : '#010606')};
+    color: var(--light-text);
+    background: ${({lightBg}) => (lightBg ? 'var(--alternate-background)' : 'var(--main-background)')};
 
     @media screen and (max-width: 768px) {
         padding: 100px 0;
@@ -51,7 +51,7 @@ export const TextWrapper = styled.div`
 `;
 
 export const TopLine = styled.p`
-    color: #00A5CF;
+    color: var(--alternate-accent-text);
     font-size: 16px;
     line-height: 16px;
     font-weight: 700;
@@ -65,7 +65,7 @@ export const Heading = styled.h1`
     font-size: 48px;
     line-height: 1.1;
     font-weight: 600px;
-    color: ${({lightText}) => (lightText ? '#F7F8F8' : '#010606')};
+    color: ${({lightText}) => (lightText ? 'var(--light-text)' : 'var(--dark-text)')};
 
     @media screen and (max-width: 480px) {
         font-size: 32px;
@@ -77,7 +77,7 @@ export const Subtitle = styled.p`
     margin-bottom: 35px;
     font-size: 18px;
     line-height: 24px;
-    color: ${({darkText}) => (darkText ? '#010606' : '#FFF')};
+    color: ${({darkText}) => (darkText ? 'var(--dark-text)' : 'var(--light-text)')};
 `;
 
 export const BtnWrap = styled.div`

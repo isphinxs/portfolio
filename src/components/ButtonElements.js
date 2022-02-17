@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 export const Button = styled.a`
     border-radius: 50px;
-    background: ${({primary}) => (primary ? '#00A5CF' : '#004E64')};
+    background: ${({primary}) => (primary ? 'var(--alternate-accent-text)' : 'var(--accent-text)')};
     white-space: nowrap;
     padding: ${({big}) => (big ? '14px 48px' : '12px 30px')};
-    color: ${({dark}) => (dark ? '#010606' : '#FFF')};
+    color: ${({dark}) => (dark ? 'var(--dark-text)' : 'var(--light-text)')};
     font-size: ${({fontBig}) => (fontBig ? '20px' : '16px')};
     outline: none;
     border: none;

@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 export const BlogLink = styled.a`
-    color: #000;
+    color: var(--dark-text);
 
     &:visited {
-        color: #000;
+        color: var(--dark-text);
     }
 `;
 
@@ -14,7 +14,7 @@ export const BlogContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #000;
+    background: var(--main-background);
 
     @media screen and (max-width: 768px) {
         height: 1100px;
@@ -45,7 +45,7 @@ export const BlogWrapper = styled.div`
 `;
 
 export const BlogCard = styled.div`
-    background: #FFF;
+    background: var(--alternate-background);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -72,7 +72,7 @@ export const BlogIcon = styled.img`
 
 export const BlogH1 = styled.h1`
     font-size: 2.5rem;
-    color: #FFF;
+    color: var(--light-text);
     margin-bottom: 64px;
 
     @media screen and (max-width: 480px) {

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const HeroContainer = styled.div`
-    background: #010606;
+    background: var(--main-background);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,7 +11,7 @@ export const HeroContainer = styled.div`
 `;
 
 export const HeroContent = styled.div`
-    color: white;
+    color: var(--light-text);
     max-width: 1200px;
     position: absolute;
     padding: 8px 24px; 
@@ -21,7 +21,7 @@ export const HeroContent = styled.div`
 `;
 
 export const HeroH1 = styled.h1`
-    color: white;
+    color: var(--light-text);
     font-size: 48px;
     text-align: center;
 
@@ -36,7 +36,7 @@ export const HeroH1 = styled.h1`
     
 export const HeroP = styled.p`
     margin-top: 24px;
-    color: white;
+    color: var(--light-text);
     font-size: 24px;
     text-align: center;
     max-width: 600px;
@@ -51,5 +51,5 @@ export const HeroP = styled.p`
 `;
 
 export const HeroA = styled.a`
-    color: #FFF;
+    color: var(--light-text);
 `;

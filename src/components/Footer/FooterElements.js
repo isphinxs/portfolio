@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const FooterContainer = styled.footer`
-    background-color: #101522;
+    background-color: var(--secondary-color);
 `;
 
 export const FooterWrap = styled.div`
@@ -33,7 +33,7 @@ export const SocialMediaWrap = styled.div`
 `;
 
 export const NameLogo = styled(Link)`
-    color: #FFF;
+    color: var(--light-text);
     font-family: 'Birthstone Bounce', cursive;
     justify-self: start;
     cursor: pointer;
@@ -46,7 +46,7 @@ export const NameLogo = styled(Link)`
 `;
 
 export const WebsiteRights = styled.small`
-    color: #FFF;
+    color: var(--light-text);
     margin-bottom: 16px;
     font-size: 1rem;
 `;
@@ -59,6 +59,6 @@ export const SocialIcons = styled.div`
 `;
 
 export const SocialIconLink = styled.a`
-    color: ${({lightText}) => (lightText ? "#FFF" : "#010606")};
+    color: ${({lightText}) => (lightText ? "var(--light-text)" : "var(--dark-text)")};
     font-size: 24px;
 `;

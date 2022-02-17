@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const AboutContainer = styled.div`
-    background: #F9F9F9;
+    background: var(--alternate-background);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,7 +11,7 @@ export const AboutContainer = styled.div`
 `;
 
 export const AboutContent = styled.div`
-    color: #010606;
+    color: var(--dark-text);
     max-width: 1200px;
     position: absolute;
     padding: 8px 24px; 
@@ -21,7 +21,7 @@ export const AboutContent = styled.div`
 `;
 
 export const AboutH1 = styled.h1`
-    color: #010606;
+    color: var(--dark-text);
     font-size: 48px;
     text-align: center;
 
@@ -36,7 +36,7 @@ export const AboutH1 = styled.h1`
     
 export const AboutP = styled.p`
     margin-top: 24px;
-    color: #010606;
+    color: var(--dark-text);
     font-size: 24px;
     text-align: center;
     max-width: 600px;
@@ -51,5 +51,5 @@ export const AboutP = styled.p`
 `;
 
 export const AboutA = styled.a`
-    color: #00A5CF;
+    color: var(--alternate-accent-text);
 `;

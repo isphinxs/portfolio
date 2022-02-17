@@ -4,8 +4,8 @@ import { FaBars } from 'react-icons/fa';
 
 export const Nav = styled.nav`
     // fix and add margin -80
-    background: #25A18E;
-    color: #FFF;
+    background: var(--accent-color); 
+    color: var(--light-text);
     font-weight: 600;
     height: 80px;
     display: flex;
@@ -15,7 +15,7 @@ export const Nav = styled.nav`
 `
 
 export const NavLink = styled(Link)`
-    color: #FFF;
+    color: var(--light-text);
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -24,13 +24,13 @@ export const NavLink = styled(Link)`
     cursor: pointer;
 
     &.active {
-        color: #004E64;
+        color: var(--accent-text);
     }
 `
 
 export const Bars = styled(FaBars)`
     display: none;
-    color: #FFF;
+    color: var(--light-text);
 
     @media screen and (max-width: 768px) {
         display: block;

@@ -6,7 +6,7 @@ export const ContactWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #010606;
+    background: var(--main-background);
 
     @media screen and (max-width: 768px) {
         height: 1100px;
@@ -23,7 +23,7 @@ export const ContactH1 = styled.h1`
     font-size: 48px;
     line-height: 1.1;
     font-weight: 600px;
-    color: white;
+    color: var(--light-text);
     text-align: center;
 
     @media screen and (max-width: 480px) {
@@ -44,7 +44,7 @@ export const ContactDiv = styled.div`
 export const ContactLabel = styled.label`
     display: block;
     margin-bottom: 5px;
-    color: #FFF;
+    color: var(--light-text);
     font-size: 18px;
 `;
 
@@ -78,8 +78,8 @@ export const ErrorDiv = styled.div`
 `;
 
 export const ContactSubmit = styled.input`
-    background-color: #00A5CF;
-    color: white;
+    background-color: var(--alternate-accent-text);
+    color: var(--light-text);
     font-size: 20px;
     border: none;
     border-radius: 50px;
