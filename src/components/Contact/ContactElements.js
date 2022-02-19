@@ -56,7 +56,7 @@ export const ContactInput = styled.input`
     font-size: 18px;
 
     &:focus {
-        border: 2px solid #00A5CF;
+        border: 2px solid var(--secondary-color);
     }
     `;
     
@@ -68,7 +68,7 @@ export const ContactTextarea = styled.textarea`
     font-size: 18px;
  
     &:focus {
-        border: 2px solid #00A5CF;
+        border: 2px solid var(--secondary-color);
     }
 `;
 
@@ -78,7 +78,7 @@ export const ErrorDiv = styled.div`
 `;
 
 export const ContactSubmit = styled.input`
-    background-color: var(--alternate-accent-text);
+    background-color: var(--secondary-color);
     color: var(--light-text);
     font-size: 20px;
     border: none;

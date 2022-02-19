@@ -10,7 +10,7 @@ const Projects = ({lightBg, id, imgStart, topLine, lightText, headline, darkText
                     <ProjectRow imgStart={imgStart}>
                         <Column1>
                             <TextWrapper>
-                                <TopLine>{topLine}</TopLine>
+                                <TopLine lightText={lightText}>{topLine}</TopLine>
                                 <Heading lightText={lightText}>{headline}</Heading>
                                 <Subtitle darkText={darkText}>{description}</Subtitle>
                                 <BtnWrap>

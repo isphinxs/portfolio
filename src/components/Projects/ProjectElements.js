@@ -51,7 +51,7 @@ export const TextWrapper = styled.div`
 `;
 
 export const TopLine = styled.p`
-    color: var(--alternate-accent-text);
+    color: ${({lightText}) => (lightText ? 'var(--light-text)' : 'var(--alternate-accent-text)')};
     font-size: 16px;
     line-height: 16px;
     font-weight: 700;

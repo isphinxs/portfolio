@@ -4,7 +4,7 @@ import { FaBars } from 'react-icons/fa';
 
 export const Nav = styled.nav`
     // fix and add margin -80
-    background: var(--accent-color); 
+    background: var(--secondary-color); 
     color: var(--light-text);
     font-weight: 600;
     height: 80px;
@@ -24,7 +24,7 @@ export const NavLink = styled(Link)`
     cursor: pointer;
 
     &.active {
-        color: var(--accent-text);
+        color: var(--alternate-accent-text);
     }
 `
 

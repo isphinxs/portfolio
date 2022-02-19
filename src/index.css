@@ -1,11 +1,10 @@
 /* Variables */
 
 :root {
-  --main-background: #010606;
+  --main-background: #25A18E;
   --alternate-background: #F9F9F9;
-  --complementary-color: #010606;
-  --secondary-color: #101522;
-  --accent-color: #25A18E;
+  --secondary-color: #0A1F24; /* dark green */
+  --accent-color: #0A1F24; /* dark grey */
   --secondary-accent-color: grey;
   --light-text: #F7F8F8;
   --dark-text: #010606;
