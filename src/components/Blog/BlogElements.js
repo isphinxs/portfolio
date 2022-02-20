@@ -20,7 +20,7 @@ export const BlogContainer = styled.div`
         height: 1100px;
     }
 
-    @media screen and (max-width: 80px) {
+    @media screen and (max-width: 480px) {
         height: 1300px;
     }
 `;
