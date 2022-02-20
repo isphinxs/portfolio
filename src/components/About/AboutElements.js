@@ -12,7 +12,7 @@ export const AboutContainer = styled.div`
 
 export const AboutContent = styled.div`
     color: var(--dark-text);
-    max-width: 1200px;
+    max-width: 1100px;
     position: absolute;
     padding: 8px 24px; 
     display: flex;

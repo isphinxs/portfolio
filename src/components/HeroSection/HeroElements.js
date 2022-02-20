@@ -12,7 +12,7 @@ export const HeroContainer = styled.div`
 
 export const HeroContent = styled.div`
     color: var(--light-text);
-    max-width: 1200px;
+    max-width: 1100px;
     position: absolute;
     padding: 8px 24px; 
     display: flex;

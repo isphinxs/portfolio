@@ -26,7 +26,7 @@ export const BlogContainer = styled.div`
 `;
 
 export const BlogWrapper = styled.div`
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
