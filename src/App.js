@@ -12,10 +12,7 @@ import Footer from './components/Footer/index';
 function App() {
   return (
     <Router>
-      <div className="App">
-        <header className="App-header">
-          <Navbar />
-        </header>           
+        <Navbar />
         <HeroSection />
         <About />
         <Projects {...projectObjOne} />
@@ -24,7 +21,6 @@ function App() {
         <Blog />
         <Contact />
         <Footer />
-      </div>
     </Router>
   );
 }
