@@ -69,7 +69,7 @@ function Contact() {
     }
 
     return(
-        <ContactWrapper>
+        <ContactWrapper id="contact">
             <ContactH1>Contact Sam</ContactH1>
             <ContactForm className="form" onSubmit={handleSubmit}>
                 <ContactDiv>

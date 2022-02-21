@@ -1,5 +1,5 @@
 export const projectObjOne = {
-    id: 'about',
+    id: 'project1',
     lightBg: false,
     lightText: true,
     topLine: 'React/Rails',
@@ -16,7 +16,7 @@ export const projectObjOne = {
 };
 
 export const projectObjTwo = {
-    id: 'discover',
+    id: 'project2',
     lightBg: true,
     lightText: false,
     topLine: 'JavaScript/Rails',
@@ -33,7 +33,7 @@ export const projectObjTwo = {
 };
 
 export const projectObjThree = {
-    id: 'about',
+    id: 'project3',
     lightBg: false,
     lightText: true,
     topLine: 'Rails',

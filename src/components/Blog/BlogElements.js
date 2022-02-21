@@ -14,7 +14,7 @@ export const BlogContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: var(--main-background);
+    background: var(--alternate-background);
 
     @media screen and (max-width: 768px) {
         height: 1100px;
@@ -72,7 +72,7 @@ export const BlogIcon = styled.img`
 
 export const BlogH1 = styled.h1`
     font-size: 2.5rem;
-    color: var(--light-text);
+    color: var(--dark-text);
     margin-bottom: 64px;
 
     @media screen and (max-width: 480px) {

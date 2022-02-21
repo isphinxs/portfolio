@@ -38,39 +38,42 @@ function Navbar() {
     return(
         <>
             <Nav scrollNav={scrollNav}>
-                {/* <NavLink to="/" exact onClick={toggleHome}><em>Hi, my name is Sam!</em></NavLink> */}
                 <NameLogo to="/">Sam</NameLogo>
                 <Bars onClick={handleClick} />
                 {dropdown && <Dropdown closeMenu={closeMenu} />}
                 <NavMenu>
-                    <NavLink to="/about"
+                    <NavLink to="about"
+                        activeClass="active"
                         smooth={true}
                         duration={500}
                         spy={true}
                         exact="true"
                         offset={-80}
-                    >ABOUT</NavLink>
-                    <NavLink to="/projects"
+                        >ABOUT</NavLink>
+                    <NavLink to="project1"
+                        activeClass="active"
                         smooth={true}
                         duration={500}
                         spy={true}
                         exact="true"
                         offset={-80}
-                    >PROJECTS</NavLink>
-                    <NavLink to="/blog"
+                        >PROJECTS</NavLink>
+                    <NavLink to="blog"
+                        activeClass="active"
                         smooth={true}
                         duration={500}
                         spy={true}
                         exact="true"
                         offset={-80}
-                    >BLOG</NavLink>
-                    <NavLink to="/contact"
+                        >BLOG</NavLink>
+                    <NavLink to="contact"
+                        activeClass="active"
                         smooth={true}
                         duration={500}
                         spy={true}
                         exact="true"
                         offset={-80}
-                    >CONTACT</NavLink>
+                        >CONTACT</NavLink>
                 </NavMenu>
             </Nav>
         </>

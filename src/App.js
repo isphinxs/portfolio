@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import About from './components/About/index';
 import Contact from './components/Contact/index';
 import Navbar from './components/Navbar';
@@ -16,25 +16,13 @@ function App() {
         <header className="App-header">
           <Navbar />
         </header>           
-        <Switch>
-          <Route path="/" exact>
-            <HeroSection />
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/blog">
-            <Blog />
-          </Route>
-          <Route path="/contact">
-            <Contact />
-          </Route>
-          <Route path="/projects">
-            <Projects {...projectObjOne} />
-            <Projects {...projectObjTwo} />
-            <Projects {...projectObjThree} />
-          </Route>
-        </Switch>
+        <HeroSection />
+        <About />
+        <Projects {...projectObjOne} />
+        <Projects {...projectObjTwo} />
+        <Projects {...projectObjThree} />
+        <Blog />
+        <Contact />
         <Footer />
       </div>
     </Router>
