@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-scroll';
 
 export const HeroContainer = styled.div`
     background: var(--main-background);
@@ -50,6 +51,6 @@ export const HeroP = styled.p`
     }    
 `;
 
-export const HeroA = styled.a`
+export const HeroLink = styled(Link)`
     color: var(--light-text);
 `;
