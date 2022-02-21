@@ -38,7 +38,7 @@ function Navbar() {
     return(
         <>
             <Nav scrollNav={scrollNav}>
-                <NameLogo to="/">Sam</NameLogo>
+                <NameLogo onClick={toggleHome}>Sam</NameLogo>
                 <Bars onClick={handleClick} />
                 {dropdown && <Dropdown closeMenu={closeMenu} />}
                 <NavMenu>
@@ -50,7 +50,7 @@ function Navbar() {
                         exact="true"
                         offset={-80}
                         >ABOUT</NavLink>
-                    <NavLink to="project1"
+                    <NavLink to="projects"
                         activeClass="active"
                         smooth={true}
                         duration={500}
