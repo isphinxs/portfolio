@@ -15,9 +15,11 @@ function App() {
         <Navbar />
         <HeroSection />
         <About />
-        <Projects {...projectObjOne} />
-        <Projects {...projectObjTwo} />
-        <Projects {...projectObjThree} />
+        <div id="projects">
+          <Projects {...projectObjOne} />
+          <Projects {...projectObjTwo} />
+          <Projects {...projectObjThree} />
+        </div>
         <Blog />
         <Contact />
         <Footer />
