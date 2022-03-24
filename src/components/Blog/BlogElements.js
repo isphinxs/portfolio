@@ -9,19 +9,19 @@ export const BlogLink = styled.a`
 `;
 
 export const BlogContainer = styled.div`
-    height: 1000px;
+    min-height: 1000px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background: var(--alternate-background);
 
-    @media screen and (max-width: 768px) {
-        height: 1100px;
+    @media screen and (max-width: 1000px) {
+        height: 1300px;
     }
 
-    @media screen and (max-width: 480px) {
-        height: 1300px;
+    @media screen and (max-width: 768px) {
+        height: 2350px;
     }
 `;
 
