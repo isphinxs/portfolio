@@ -12,10 +12,10 @@ const About = () => {
                     Throughout my career, I have worked at the intersection of science education, outreach, and program management to make positive change in the world. 
                 </AboutP>              
                 <AboutP>
-                    In grad school I was exposed to programming through ArcGIS and have been interested in coding ever since.  I went on to study software engineering at <AboutA href="https://www.freecodecamp.org">FreeCodeCamp</AboutA> and the <AboutA href="https://flatironschool.com/">Flatiron School</AboutA>.
+                    In grad school I was exposed to programming through ArcGIS and have been interested in coding ever since.  I went on to study software engineering at <AboutA href="https://www.freecodecamp.org">FreeCodeCamp</AboutA> and the <AboutA href="https://flatironschool.com/">Flatiron School</AboutA>. I currently work as a full-stack software engineer.
                 </AboutP>
                 <AboutP>
-                    With experience in environmental studies, publishing, and software engineering, I enjoy shepherding both technical projects and more complex, mission-driven ventures—and developing processes to make those programs more efficient and easier to manage.
+                    With my prior experience in environmental studies, publishing, and higher education, I enjoy shepherding both technical projects and more complex, mission-driven ventures—and developing processes to make those programs more efficient and easier to manage.
                 </AboutP>
                 <span>&nbsp;</span>
                 <span>&nbsp;</span>

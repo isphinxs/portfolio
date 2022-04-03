@@ -9,7 +9,7 @@ const HeroSection = () => {
         <HeroContainer id="home">
             <HeroContent>
                 <HeroH1>Hi, my name is Sam!</HeroH1>
-                <HeroP>I'm a full-stack software engineer experienced in JavaScript, React, and Rails, with a background in science education and program management.</HeroP>
+                <HeroP>I'm a full-stack software engineer experienced in JavaScript, Angular, React, and Rails, with a background in science education and program management.</HeroP>
                 <HeroLink to="about"
                     activeClass="active"
                     smooth={true}
