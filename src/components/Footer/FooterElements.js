@@ -61,4 +61,10 @@ export const SocialIcons = styled.div`
 export const SocialIconLink = styled.a`
     color: ${({lightText}) => (lightText ? "var(--light-text)" : "var(--dark-text)")};
     font-size: 24px;
+
+    &:hover {
+        transform: scale(1.3);
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+    }
 `;
