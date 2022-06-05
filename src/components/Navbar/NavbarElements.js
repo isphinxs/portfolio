@@ -3,12 +3,13 @@ import { Link } from 'react-scroll';
 import { FaBars } from 'react-icons/fa';
 
 export const Nav = styled.nav`
-    // fix and add margin -80
     background: var(--secondary-color); 
     color: var(--light-text);
     font-weight: 600;
     height: 80px;
     display: flex;
+    position: sticky;
+    top: 0;
     justify-content: space-between;
     padding: 0.5rem (calc(100vw - 1000px) / 2);
     z-index: 10;
