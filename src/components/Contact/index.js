@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import emailjs from 'emailjs-com';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faEnvelope, faEnvelopeOpenText, faExclamationCircle, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
+import ReCAPTCHA from 'react-google-recaptcha';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { ContactWrapper, ContactH1, ContactForm, ContactLabel, ContactInput, ContactTextarea, ContactDiv, ErrorDiv, ContactSubmit } from './ContactElements';
 import { SocialIconLink, SocialIcons } from '../Footer/FooterElements';
@@ -10,9 +9,13 @@ function Contact() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [content, setContent] = useState("");
+    const [captchaValue, setCaptchaValue] = useState();
+    const [formErrors, setFormErrors] = useState({
+        name: "",
+        email: "",
+        content: ""
+    });
     const error = document.getElementsByClassName("error");
-    const successIcon = document.getElementsByClassName("success-icon");
-    const failureIcon = document.getElementsByClassName("failure-icon");
 
     const handleChange = event => {
         if (event.target.name === "name") {
@@ -26,46 +29,94 @@ function Contact() {
         };
     }
 
-    const handleSubmit = event => {
-        event.preventDefault();
-        validate(name, 0, "Name cannot be blank");
-        validate(email, 1, "Email cannot be blank");
-        validate(content, 2, "Content cannot be blank");
+    const handleRecaptcha = (captchaValue) => {
+        setCaptchaValue(captchaValue);
+        handleSubmit();
+    }
 
+    const handleSubmit = event => {
         const templateParams = {
-            from_name: name,
-            reply_to: email,
-            message: content
+            "from_name": name,
+            "reply_to": email,
+            "message": content,
+            "g-recaptcha-response": captchaValue
         }
 
         const resetForm = () => {
             setName("");
             setEmail("");
             setContent("");
-            successIcon[0].style.opacity = 1;
-            successIcon[1].style.opacity = 1;
-            successIcon[2].style.opacity = 1;
-        }
-
-        emailjs.send(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, templateParams, process.env.REACT_APP_USER_ID)
-            .then(result => {
-                console.log(result.text);
-                resetForm();
-            }, error => {
-                console.log(error.text);
+            setFormErrors({
+                name: "",
+                email: "",
+                content: ""
             });
-    }
-
-    const validate = (value, serial, message) => {
-        if (value.trim() === "") {
-            error[serial].innerHTML = message;
-            successIcon[serial].style.opacity = 0;
-            failureIcon[serial].style.opacity = 1;
-        } else {
-            error[serial].innerhtml = "";
-            successIcon[serial].style.opacity = 1;
-            failureIcon[serial].style.opacity = 0;
         }
+        
+        const validate = () => {
+            let hasErrors = false;
+
+            if (name.trim() === "") {
+                hasErrors = true;
+                setFormErrors(formErrors => ({
+                    ...formErrors, 
+                    name: "*Name cannot be blank"
+                }));
+            } else {
+                setFormErrors(formErrors => ({
+                    ...formErrors, 
+                    name: ""
+                }));
+            }
+            
+            if (email.trim() === "") {
+                hasErrors = true;
+                setFormErrors(formErrors => ({
+                    ...formErrors, 
+                    email: "*Email cannot be blank"
+                }));
+            } else {
+                setFormErrors(formErrors => ({
+                    ...formErrors, 
+                    email: ""
+                }));
+            }
+            
+            if (content.trim() === "") {
+                hasErrors = true;
+                setFormErrors(formErrors => ({
+                    ...formErrors, 
+                    content: "*Content cannot be blank"
+                }));
+            } else {
+                setFormErrors(formErrors => ({
+                    ...formErrors, 
+                    content: ""
+                }));
+            }
+            
+            return hasErrors;
+        }
+
+        const sendEmail = () => {
+            const hasErrors = validate();
+
+            if (!hasErrors) {
+                debugger;
+                emailjs.send(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, templateParams, process.env.REACT_APP_USER_ID)
+                    .then(result => {
+                        alert("Message sent, thank you!");
+                        console.log(result.text);
+                        resetForm();
+                    }, error => {
+                        alert("I'm sorry, there was an error. Please try again!");
+                        console.log(error.text);
+                    });
+            }
+        }
+
+        event.preventDefault();
+        sendEmail();
     }
 
     return(
@@ -74,30 +125,22 @@ function Contact() {
             <ContactForm className="form" onSubmit={handleSubmit}>
                 <ContactDiv>
                     <ContactLabel htmlFor="name">Name</ContactLabel>
-                    <FontAwesomeIcon className="icon" icon={faUser} size="1x" />
+                    <ErrorDiv className="error">{formErrors.name}</ErrorDiv>
                     <ContactInput type="text" name="name" id="name" onChange={handleChange} placeholder="Name" value={name} />
-                    <FontAwesomeIcon className="icon failure-icon" icon={faExclamationCircle} size="1x" />
-                    <FontAwesomeIcon className="icon success-icon" icon={faCheckCircle} size="1x" />
-                    <ErrorDiv className="error"></ErrorDiv>
                 </ContactDiv>
                 <ContactDiv>
                     <ContactLabel htmlFor="email">Email</ContactLabel>
-                    <FontAwesomeIcon className="icon" icon={faEnvelope} size="1x" />
+                    <ErrorDiv className="error">{formErrors.email}</ErrorDiv>
                     <ContactInput type="text" name="email" id="email" onChange={handleChange} placeholder="Email" value={email} />
-                    <FontAwesomeIcon className="icon failure-icon" icon={faExclamationCircle} size="1x" />
-                    <FontAwesomeIcon className="icon success-icon" icon={faCheckCircle} size="1x" />
-                    <ErrorDiv className="error"></ErrorDiv>
                 </ContactDiv>
                 <ContactDiv>
                     <ContactLabel htmlFor="content">Content</ContactLabel>
-                    <FontAwesomeIcon className="icon" icon={faEnvelopeOpenText} size="1x" />
+                    <ErrorDiv className="error">{formErrors.content}</ErrorDiv>
                     <ContactTextarea name="content" id="content" onChange={handleChange} placeholder="Hi! I'd love to connect." value={content} />
-                    <FontAwesomeIcon className="icon failure-icon" icon={faExclamationCircle} size="1x" />
-                    <FontAwesomeIcon className="icon success-icon" icon={faCheckCircle} size="1x" />
-                    <ErrorDiv className="error"></ErrorDiv>
                 </ContactDiv>
+                <ReCAPTCHA sitekey="process.env.REACT_APP_SITE_KEY" onChange={handleRecaptcha} />
                 <ContactSubmit className="contact-button" type="submit" value="Submit" />
-                <div className="g-recaptcha" data-sitekey="process.env.REACT_APP_SITE_ID"></div>
+                <script src="https://www.google.com/recaptcha/api.js" async defer></script>
             </ContactForm>
             <span>&nbsp;</span>
             <span>&nbsp;</span>

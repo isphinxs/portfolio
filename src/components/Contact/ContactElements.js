@@ -51,20 +51,24 @@ export const ContactLabel = styled.label`
 export const ContactInput = styled.input`
     width: 100%;
     height: 40px;
+    border: 2px solid black;
     border-radius: 4px;
-    padding: 0 30px;
+    padding: 0 10px;
+    margin-bottom: 10px;
     font-size: 18px;
-
+    
     &:focus {
         border: 2px solid var(--secondary-color);
     }
     `;
     
-export const ContactTextarea = styled.textarea`
+    export const ContactTextarea = styled.textarea`
     width: 100%;
-    height: 40px;
+    height: 80px;
+    border: 2px solid black;
     border-radius: 4px;
-    padding: 5px 30px;
+    padding: 5px 10px;
+    margin-bottom: 15px;
     font-size: 18px;
  
     &:focus {
@@ -74,7 +78,8 @@ export const ContactTextarea = styled.textarea`
 
 export const ErrorDiv = styled.div`
     font-size: 18px;
-    margin-top: 10px;
+    margin: 10px 0;
+    color: yellow;
 `;
 
 export const ContactSubmit = styled.input`
@@ -84,7 +89,7 @@ export const ContactSubmit = styled.input`
     border: none;
     border-radius: 50px;
     padding: 14px 48px;
-    margin-bottom: 20px;
+    margin: 20px 0;
     cursor: pointer;
 
     &:hover {

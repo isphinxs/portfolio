@@ -1,10 +1,16 @@
-form div .icon {
+/* form div .icon {
     position: absolute;
     margin: 10px;
 }
   
 .failure-icon, .error {
     color: red;
+}
+
+.icon-test {
+    position: absolute;
+    top: 55;
+    right: 10;
 }
 
 .success-icon {
@@ -14,4 +20,4 @@ form div .icon {
 .success-icon, .failure-icon {
     right: 23%;
     opacity: 0;
-}
+} */
