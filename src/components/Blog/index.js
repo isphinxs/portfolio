@@ -7,9 +7,9 @@ const Blog = () => {
         <BlogContainer id="blog">
             <BlogH1>Blog Posts</BlogH1>
             <BlogWrapper>
-                {Blogs.map( ({ img, title, tagline, url }) => {
+                {Blogs.map( ({ id, img, title, tagline, url }) => {
                     return(
-                        <BlogLink href={url}>
+                        <BlogLink key={id} href={url}>
                             <BlogCard>
                                 <BlogIcon src={img} />
                                 <BlogH2>{title}</BlogH2>
