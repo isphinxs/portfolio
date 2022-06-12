@@ -102,7 +102,6 @@ function Contact() {
             const hasErrors = validate();
 
             if (!hasErrors) {
-                debugger;
                 emailjs.send(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, templateParams, process.env.REACT_APP_USER_ID)
                     .then(result => {
                         alert("Message sent, thank you!");
@@ -138,9 +137,8 @@ function Contact() {
                     <ErrorDiv className="error">{formErrors.content}</ErrorDiv>
                     <ContactTextarea name="content" id="content" onChange={handleChange} placeholder="Hi! I'd love to connect." value={content} />
                 </ContactDiv>
-                <ReCAPTCHA sitekey="process.env.REACT_APP_SITE_KEY" onChange={handleRecaptcha} />
+                <ReCAPTCHA sitekey="process.env.REACT_APP_SITE_KEY" verifyCallback={handleRecaptcha} />
                 <ContactSubmit className="contact-button" type="submit" value="Submit" />
-                <script src="https://www.google.com/recaptcha/api.js" async defer></script>
             </ContactForm>
             <span>&nbsp;</span>
             <span>&nbsp;</span>
