@@ -1,4 +1,10 @@
-# Getting Started with Create React App
+# Portfolio
+
+This is a basic portfolio site built as a single-page application with React. 
+
+Deploy via gh-pages.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
