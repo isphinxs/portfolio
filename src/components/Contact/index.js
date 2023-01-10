@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import React, { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 import ReCAPTCHA from 'react-google-recaptcha';
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
+
 import { ContactWrapper, ContactH1, ContactForm, ContactLabel, ContactInput, ContactTextarea, ContactDiv, ErrorDiv, ContactSubmit } from './ContactElements';
 import { SocialIconLink, SocialIcons } from '../Footer/FooterElements';
 
 function Contact() {
+    const captchaRef = useRef(null);
+
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [content, setContent] = useState("");
-    const [captchaValue, setCaptchaValue] = useState();
     const [formErrors, setFormErrors] = useState({
         name: "",
         email: "",
@@ -29,12 +31,11 @@ function Contact() {
         };
     }
 
-    const handleRecaptcha = (captchaValue) => {
-        setCaptchaValue(captchaValue);
-        handleSubmit();
-    }
-
     const handleSubmit = event => {
+        // Obtain and reset reCaptcha value
+        const captchaValue = captchaRef.current.getValue();
+        captchaRef.current.reset();
+
         const templateParams = {
             "from_name": name,
             "reply_to": email,
@@ -51,6 +52,7 @@ function Contact() {
                 email: "",
                 content: ""
             });
+            captchaRef.current.reset();
         }
         
         const validate = () => {
@@ -102,7 +104,7 @@ function Contact() {
             const hasErrors = validate();
 
             if (!hasErrors) {
-                emailjs.send(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, templateParams, process.env.REACT_APP_USER_ID)
+                emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, templateParams, process.env.REACT_APP_EMAILJS_USER_ID)
                     .then(result => {
                         alert("Message sent, thank you!");
                         console.log(result.text);
@@ -137,7 +139,7 @@ function Contact() {
                     <ErrorDiv className="error">{formErrors.content}</ErrorDiv>
                     <ContactTextarea name="content" id="content" onChange={handleChange} placeholder="Hi! I'd love to connect." value={content} />
                 </ContactDiv>
-                <ReCAPTCHA sitekey="process.env.REACT_APP_SITE_KEY" verifyCallback={handleRecaptcha} />
+                <ReCAPTCHA sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY} ref={captchaRef}/>
                 <ContactSubmit className="contact-button" type="submit" value="Submit" />
             </ContactForm>
             <span>&nbsp;</span>
